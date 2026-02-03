@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>সুপারি বিক্রয় রিপোর্ট - প্রিমিয়াম ড্যাশবোর্ড</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <div class="header">
+            <h2>🍃 সুপারি সেলস ড্যাশবোর্ড</h2>
+            <p>প্রফেশনাল বিজনেস রিপোর্টিং সিস্টেম</p>
+        </div>
+
+        <form id="proSalesForm">
+            <div class="form-section">
+                <div class="input-box">
+                    <label>ক্রেতার নাম</label>
+                    <i class="fa fa-user"></i>
+                    <input type="text" id="customerName" placeholder="নাম লিখুন" required>
+                </div>
+                <div class="input-box">
+                    <label>ফোন নম্বর</label>
+                    <i class="fa fa-phone"></i>
+                    <input type="tel" id="phone" placeholder="ফোন নম্বর" required>
+                </div>
+            </div>
+
+            <div class="input-box" style="margin-bottom: 20px;">
+                <label>ক্রেতার ঠিকানা</label>
+                <i class="fa fa-map-marker-alt"></i>
+                <input type="text" id="address" placeholder="বিস্তারিত ঠিকানা লিখুন" required>
+            </div>
+
+            <div class="form-section">
+                <div class="input-box">
+                    <label>সুপারির পরিমাণ (পিস)</label>
+                    <i class="fa fa-box"></i>
+                    <input type="number" id="quantity" placeholder="0" required>
+                </div>
+                <div class="input-box">
+                    <label>মোট বিল (টাকা)</label>
+                    <i class="fa fa-money-bill-wave"></i>
+                    <input type="number" id="totalBill" placeholder="0" required>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <div class="input-box">
+                    <label>নগদ জমা</label>
+                    <i class="fa fa-hand-holding-usd"></i>
+                    <input type="number" id="paidAmount" placeholder="0" required>
+                </div>
+                <div class="bill-card">
+                    <div>
+                        <small>বাকি টাকার পরিমাণ</small>
+                        <h4 id="displayDue">৳ ০.০০</h4>
+                    </div>
+                    <i class="fa fa-file-invoice"></i>
+                </div>
+            </div>
+
+            <label>ক্রেতা বা মালের ছবি (প্রমাণস্বরূপ)</label>
+            <div class="image-upload" id="dropZone">
+                <i class="fa fa-camera"></i>
+                <p id="fileName">ক্যামেরা ওপেন করতে বা ছবি আপলোড করতে ক্লিক করুন</p>
+                <input type="file" id="fileInput" accept="image/*" capture="camera">
+            </div>
+
+            <div class="input-box" style="margin-bottom: 25px;">
+                <label>আপনার নাম (বিক্রেতা)</label>
+                <i class="fa fa-user-tie"></i>
+                <input type="text" id="sellerName" placeholder="ঐচ্ছিক">
+            </div>
+
+            <button type="submit" class="btn-submit" id="submitBtn">
+                <i class="fa fa-paper-plane"></i> রিপোর্ট সাবমিট করুন
+            </button>
+        </form>
+
+        <div id="success" class="success-msg">
+            <i class="fa fa-check-circle"></i> অভিনন্দন! ডাটা সফলভাবে সেভ হয়েছে।
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
